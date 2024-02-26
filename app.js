@@ -26,3 +26,8 @@ function sendMessage() {
         chatBox.scrollTop = chatBox.scrollHeight;
     }
 }
+function handleKeyPress(event) {
+    if (event.keyCode === 13) { // 13 is the keycode for the Enter key
+        sendMessage(); // Call sendMessage function when Enter key is pressed
+    }
+}

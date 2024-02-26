@@ -24,6 +24,17 @@ body {
     border-radius: 5px;
 }
 
+.message {
+    background-color: #cce6ff; /* Light blue background color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.user-message {
+    background-color: #d9ead3; /* Light green background color */
+}
+
 .message-input-container {
     display: flex;
 }
@@ -37,7 +48,7 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: #ff69b4; /* Hot pink */
+    background-color: #007bff; /* Blue button color */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -46,25 +57,5 @@ button {
 }
 
 button:hover {
-    background-color: #ff1493; /* Dark pink */
-}
-/* Add styles for each message */
-.message {
-    background-color: #007bff; /* Blue background for messages */
-    color: #fff; /* White text color */
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    max-width: 70%; /* Limit message width */
-    word-wrap: break-word; /* Wrap long messages */
-}
-
-/* Style for received messages */
-.message.received {
-    background-color: #28a745; /* Green background for received messages */
-}
-
-/* Style for sent messages */
-.message.sent {
-    background-color: #dc3545; /* Red background for sent messages */
+    background-color: #0056b3; /* Darker blue button color on hover */
 }
