@@ -1,0 +1,22 @@
+{
+  "name": "deepschathari",
+  "version": "1.0.0",
+  "description": "Its just a chat Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hari"
+  },
+  "keywords": [
+    "hari"
+  ],
+  "author": "deepak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.4"
+  }
+}
