@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background color */
+}
+
+.chat-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    padding: 20px;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Light gray background color */
+    border-radius: 5px;
+}
+
+.message-input-container {
+    display: flex;
+}
+
+#message-input {
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Hot pink */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add some space between the input field and button */
+}
+
+button:hover {
+    background-color: #ff1493; /* Dark pink */
+}
+/* Add styles for each message */
+.message {
+    background-color: #007bff; /* Blue background for messages */
+    color: #fff; /* White text color */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    max-width: 70%; /* Limit message width */
+    word-wrap: break-word; /* Wrap long messages */
+}
+
+/* Style for received messages */
+.message.received {
+    background-color: #28a745; /* Green background for received messages */
+}
+
+/* Style for sent messages */
+.message.sent {
+    background-color: #dc3545; /* Red background for sent messages */
+}
