@@ -1,0 +1,13 @@
+# Set default behavior for line endings
+* text=auto
+
+# Denote all files that are binary and should not have line endings normalized
+*.png binary
+*.jpg binary
+*.gif binary
+
+# Denote specific files that should have LF line endings on checkout
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+server.js text eol=crlf
