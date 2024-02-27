@@ -2,11 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light gray background color */
+    background-color: #eef3f5; /* Light gray background color */
 }
 
 .chat-container {
-    max-width: 500px;
+    max-width: 6000px;
     margin: 50px auto;
     background-color: #fff; /* White background */
     border-radius: 10px;
@@ -122,4 +122,17 @@ button:hover {
 .name-status p {
     margin: 0;
     font-size: 0.8em; /* Adjust font size as needed */
+}
+.send-button {
+    padding: 10px 20px;
+    background-color: #1eff00; /* Initial blue button color */
+    color: #2b2424;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.send-button:hover {
+    background-color: #0056b3; /* Darker blue button color on hover */
 }
