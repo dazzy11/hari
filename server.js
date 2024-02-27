@@ -1,27 +1,23 @@
 const express = require('express');
-const http = require('http');
-const socketIo = require('socket.io');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const app = express();
-const server = http.createServer(app);
-const io = socketIo(server);
 
-// Socket.io setup
-io.on('connection', (socket) => {
-    console.log('A user connected');
+// Body parser middleware
+app.use(bodyParser.json());
 
-    socket.on('disconnect', () => {
-        console.log('User disconnected');
-    });
+// Connect to MongoDB (replace 'your_database_url' with your actual MongoDB URL)
+mongoose.connect('mongodb://localhost:27017/chatAppDB', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
-    socket.on('chat message', (msg) => {
-        io.emit('chat message', msg); // Broadcast message to all connected clients
-    });
-});
+app.use('/api/messages', require('./routes/messages'));
+
+// Define routes (you'll define these routes later)
+// Example:
+// app.use('/api/messages', require('./routes/messages'));
 
 const PORT = process.env.PORT || 3000;
 
-server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
