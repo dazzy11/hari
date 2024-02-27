@@ -12,11 +12,13 @@ mongoose.connect('mongodb://localhost:27017/chatAppDB', { useNewUrlParser: true,
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
+// Define routes
 app.use('/api/messages', require('./routes/messages'));
 
-// Define routes (you'll define these routes later)
-// Example:
-// app.use('/api/messages', require('./routes/messages'));
+// Define route handler for the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the chat application!');
+});
 
 const PORT = process.env.PORT || 3000;
 
