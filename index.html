@@ -7,28 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   
-    <div class="chat-container">
-        <div class="profile-info">
-            <img src="profile.png" alt="Profile Picture">
-            <div class="name-container">
-                <h2>Hariharan</h2>
-                <div class="online-status">
-                    <span class="dot"></span><p>Online</p>
-                </div>
+    <div class="container">
+        <div class="contacts-container">
+            <div class="contacts">
+                <!-- Sample contacts, you can dynamically populate this -->
+                <div class="contact" onclick="switchChat('Hariharan')">Hariharan</div>
+                <div class="contact" onclick="switchChat('Deepak')">Deepak</div>
+                <div class="contact" onclick="switchChat('Cyrus')">Cyrus</div>
+                <div class="contact" onclick="switchChat('Siruthai')">Siruthai</div>
             </div>
         </div>
-    
-    
-        <div class="chat-box" id="chat-box"></div>
-        
-        <div class="message-input-container">
-            <input type="text" id="message-input" placeholder="Type your message..."  onkeypress="handleKeyPress(event)">
-        
-            <button class="send-button">Send</button>
+        <div class="chat-container">
+            <!-- Chat profile info and messages will be dynamically updated -->
+            <div class="profile-info">
+                <img src="profile.png" alt="Profile Picture">
+                <div class="name-status">
+                    <h2 id="chat-profile-name">Hariharan</h2>
+                    <div class="online-status">
+                        <p>Online</p>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-box" id="chat-box"></div>
+            <div class="message-input-container">
+                <input type="text" id="message-input" placeholder="Type your message..." autofocus onkeypress="handleKeyPress(event)">
+                <button class="send-button" onclick="sendMessage()">Send</button>
+            </div>
         </div>
     </div>
-
     <script src="app.js"></script>
 </body>
+
 </html>

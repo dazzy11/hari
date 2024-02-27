@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,102 +6,29 @@ body {
     background-color: #eef3f5; /* Light gray background color */
 }
 
+/* Chat container styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 20px auto; /* Modified margin */
+    padding: 20px;
+}
+
 .chat-container {
-    max-width: 6000px;
-    margin: 50px auto;
-    background-color: #fff; /* White background */
+    width: 70%; /* Adjusted width */
+    background-color: #f9f9f9; /* Light gray background color */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
     padding: 20px;
+    margin-top: 10px; /* Moved up */
+    margin-right: 40px; /* Moved right */
 }
 
-.chat-box {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9; /* Light gray background color */
-    border-radius: 5px;
-}
-
-.message {
-    background-color: #cce6ff; /* Light blue background color */
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-.user-message {
-    background-color: #d9ead3; /* Light green background color */
-}
-
-.message-input-container {
-    display: flex;
-}
-
-#message-input {
-    flex: 1; /* Take remaining space */
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff; /* Blue button color */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px; /* Add some space between the input field and button */
-}
-
-button:hover {
-    background-color: #0056b3; /* Darker blue button color on hover */
-}
-/* Add this CSS to your existing styles.css file */
-
-.header {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: #007bff; /* Blue header background color */
-    color: #fff; /* White text color */
-}
-
-.profile-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.profile-info h2 {
-    margin: 0;
-}
-
-.online-status {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Push the online status to the right */
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    background-color: #0dbd00; /* Green dot color */
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
-.online-status p {
-    margin: 0;
-}
 .profile-info {
     display: flex;
     align-items: center;
-    flex: 1;
+    margin-bottom: 20px;
 }
 
 .profile-info img {
@@ -123,16 +51,109 @@ button:hover {
     margin: 0;
     font-size: 0.8em; /* Adjust font size as needed */
 }
+
+.chat-box {
+    height: calc(100vh - 250px); /* Set chat box height to fill the remaining height of the viewport */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Light gray background color */
+    border-radius: 5px;
+}
+
+.sent-message {
+    background-color: #cce6ff; /* Light blue background color */
+    color: #000; /* Black text color for sent messages */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.received-message {
+    background-color: #d9ead3; /* Light green background color */
+    color: #000; /* Black text color for received messages */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.message-input-container {
+    display: flex;
+}
+
+#message-input {
+    flex: 1; /* Take remaining space */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 .send-button {
     padding: 10px 20px;
-    background-color: #1eff00; /* Initial blue button color */
-    color: #2b2424;
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: 10px; /* Add some space between the input field and button */
 }
 
 .send-button:hover {
     background-color: #0056b3; /* Darker blue button color on hover */
+}
+
+/* Contacts container styles */
+.contacts-container {
+    width: 150px; /* Adjust width as needed */
+    max-height: 200px; /* Set maximum height to limit the size */
+    background-color: #fff; /* White background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    padding: 20px;
+    overflow-y: auto; /* Add scroll if contacts overflow */
+}
+
+.contact {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+    /* Smooth transition on hover */
+}
+
+.contact:hover {
+    background-color: #93bbe7; /* Light gray background color on hover */
+}
+
+.online-status {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Vertically align items */
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #0dbd00; /* Green dot color */
+    border-radius: 50%;
+    margin-right: 5px; /* Add some spacing between the dot and the text */
+}
+.message {
+    background-color: #90b9dd; /* Light blue background color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .chat-container,
+    .contacts-container {
+        width: 100%;
+    }
 }
