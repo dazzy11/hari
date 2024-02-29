@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    
     <div class="container">
         <div class="contacts-container">
             <div class="contacts">
+                <h1 class="app-name">kaka chats💖</h1>
+
                 <!-- Sample contacts, you can dynamically populate this -->
                 <div class="contact" onclick="switchChat('Hariharan')">Hariharan</div>
                 <div class="contact" onclick="switchChat('Deepak')">Deepak</div>
                 <div class="contact" onclick="switchChat('Cyrus')">Cyrus</div>
-                <div class="contact" onclick="switchChat('Siruthai')">Siruthai</div>
+                <div class="contact" onclick="switchChat('Siva')">Siva</div>
             </div>
         </div>
         <div class="chat-container">
@@ -24,11 +28,12 @@
                 <div class="name-status">
                     <h2 id="chat-profile-name">Hariharan</h2>
                     <div class="online-status">
-                        <p>Online</p>
                         <span class="dot"></span>
+                        <p>Online</p>
                     </div>
                 </div>
             </div>
+            
             <div class="chat-box" id="chat-box"></div>
             <div class="message-input-container">
                 <input type="text" id="message-input" placeholder="Type your message..." autofocus onkeypress="handleKeyPress(event)">
@@ -36,6 +41,7 @@
             </div>
         </div>
     </div>
+    
     <script src="app.js"></script>
 </body>
 
