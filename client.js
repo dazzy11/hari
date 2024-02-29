@@ -22,3 +22,4 @@ function handleKeyPress(event) {
         sendMessage();
     }
 }
+
