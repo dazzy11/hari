@@ -66,7 +66,7 @@ body {
 
 .sent-message {
     background-color: #445; /* Dark blue background color */
-    color: #fff; /* White text color for sent messages */
+    color: #ffffff; /* White text color for sent messages */
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -74,7 +74,7 @@ body {
 
 .received-message {
     background-color: #333; /* Darker gray background color */
-    color: #fff; /* White text color for received messages */
+    color: #ffffff; /* White text color for received messages */
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -89,7 +89,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #666; /* Darker border color */
-    color: #fff; /* White text color */
+    color: #ffffff; /* White text color */
     background-color: #333; /* Darker gray background color */
 }
 
@@ -137,6 +137,7 @@ body {
 
 .message {
     background-color: #90b9dd; /* Light blue background color */
+    color: #000000;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -154,9 +155,9 @@ body {
 /* Contact hover effect */
 .contact:hover,
 .contact:visited {
-    background-color: #8bee9b;
+    background-color: #cccbcb;
     transform: scale(1.0); /* Scale up on hover */
-    color: #c23939; /* Ensure text color remains unchanged */
+    color: #000000; /* Ensure text color remains unchanged */
     text-shadow: none; /* Remove text shadow */
 }
 
@@ -183,7 +184,7 @@ body {
 
 .app-name {
     font-size: 2rem; /* Adjust font size as needed */
-    color: #11080f; /* Adjust color as needed */
+    color: #ffffff; /* Adjust color as needed */
     margin-bottom: 20px; /* Adjust margin as needed */
     animation: pulse 1.5s infinite alternate; /* Apply animation */
 }
